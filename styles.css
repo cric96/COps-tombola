@@ -59,14 +59,14 @@ button:hover {
 }
 
 .selected-images-container {
-    max-width: 600px; /* Set a maximum width for the container */
+    max-width: 1000px; /* Set a maximum width for the container */
     margin: 0 auto; /* Center the container horizontally */
 }
 
 .selected-images-container img {
     margin: 5px;
-    max-width: 50px;
-    max-height: 50px;
+    max-width: 40px;
+    max-height: 40px;
     object-fit: cover;
     border: 1px solid #ccc;
     border-radius: 5px;
