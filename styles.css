@@ -62,7 +62,7 @@ button:hover {
     max-width: 600px; /* Set a maximum width for the container */
     margin: 0 auto; /* Center the container horizontally */
     column-gap: 10px; /* Adjust the gap between columns as needed */
-    column-count: 10; /* Set the desired number of columns */
+    column-count: 9; /* Set the desired number of columns */
 }
 
 .selected-images-container img {
