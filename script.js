@@ -5,19 +5,6 @@ let selectedImages = [];
 let images = [];
 
 function generateRandomImage() {
-    const loadImagesMessage = document.getElementById('loadImagesMessage');
-    if (selectedImages.length === 0) {
-        loadImagesMessage.textContent = 'Images loading...';
-        loadImages()
-            .then(() => {
-                loadImagesMessage.textContent = 'Images loaded!';
-            })
-            .catch(error => {
-                console.error('Error loading images:', error);
-                loadImagesMessage.textContent = 'Error loading images';
-            });
-    }
-
     const latestImageContainer = document.getElementById('latestImageContainer');
     const randomImage = getRandomImage();
 
@@ -34,8 +21,7 @@ function getRandomImage() {
     if (availableImages.length === 0) {
         // Reset selectedImages array if all images have been selected
         selectedImages = [];
-        loadImages(); // Reload images to allow selection again
-        return getRandomImage();
+        return getRandomImage(); // Re-run to allow selection again
     }
     const randomIndex = Math.floor(Math.random() * availableImages.length);
     const selectedImage = availableImages.splice(randomIndex, 1)[0];
