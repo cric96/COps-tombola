@@ -10,10 +10,6 @@ body {
     background-color: #f4f4f4;
 }
 
-/* styles.css */
-
-/* ... existing styles ... */
-
 .main-container {
     display: flex;
     flex-direction: column;
@@ -39,7 +35,7 @@ body {
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     margin-top: 20px;
-    margin-bottom: 20px; /* Add margin between the latest image and the button */
+    margin-bottom: 20px; /* Add margin between the button and selected images */
 }
 
 button {
