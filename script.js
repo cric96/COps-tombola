@@ -11,10 +11,14 @@ function generateRandomImage() {
         loadImages();
     }
 
-    const selectedImagesContainer = document.getElementById('selectedImages');
+    const latestImageContainer = document.getElementById('latestImageContainer');
     const randomImage = getRandomImage();
 
+    // Display the latest selected image
+    latestImageContainer.innerHTML = `<img src="${randomImage}" alt="Latest Selected Image">`;
+
     // Display the selected images above the button
+    const selectedImagesContainer = document.getElementById('selectedImages');
     selectedImagesContainer.innerHTML += `<img src="${randomImage}" alt="Selected Image">`;
 
     // Add the selected image to the array to avoid duplicates
