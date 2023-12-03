@@ -59,9 +59,6 @@ button:hover {
 }
 
 .selected-images-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
     max-width: 600px; /* Set a maximum width for the container */
     margin: 0 auto; /* Center the container horizontally */
 }
@@ -73,10 +70,5 @@ button:hover {
     object-fit: cover;
     border: 1px solid #ccc;
     border-radius: 5px;
-}
-
-/* New style to create rows of ten */
-.selected-images-container::after {
-    content: '';
-    flex: auto;
+    display: inline-block;
 }
