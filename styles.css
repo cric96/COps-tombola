@@ -68,7 +68,7 @@ button:hover {
 .selected-images-container img {
     margin: 5px;
     width: 100%; /* Make each image take the full width of its column */
-    max-height: 100px; /* Set the desired maximum height for the images */
+    max-height: 50px;
     object-fit: cover;
     border: 1px solid #ccc;
     border-radius: 5px;
