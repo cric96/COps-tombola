@@ -14,6 +14,8 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    max-width: 600px; /* Set a maximum width for the container */
+    margin: 0 auto; /* Center the container horizontally */
 }
 
 .bingo-box {
@@ -42,7 +44,7 @@ button:hover {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    margin-bottom: 20px;
+    margin-top: 20px; /* Adjust margin as needed */
 }
 
 .selected-image-container {
@@ -54,7 +56,7 @@ button:hover {
 
 .selected-image-container img {
     margin: 5px;
-    max-width: 50px; /* Adjust the size of the selected images */
+    max-width: 50px;
     max-height: 50px;
     object-fit: cover;
     border: 1px solid #ccc;
