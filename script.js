@@ -3,6 +3,7 @@
 const imageFolder = 'images'; // Folder where your images are stored
 const imagesPerRow = 10; // Number of images to display per row
 let selectedImages = [];
+let images = [];
 
 function generateRandomImage() {
     if (selectedImages.length === 0) {
@@ -46,7 +47,7 @@ function fetchImagesList() {
     return new Promise((resolve, reject) => {
         fetch(`images-list.json`) // Assuming you have a file listing your images
             .then(response => response.json())
-            .then(data => resolve(data.images))
+            .then(data => resolve(data.images.map(image => `${imageFolder}/${image}`)))
             .catch(error => reject(error));
     });
 }
