@@ -25,8 +25,7 @@ function getRandomImage() {
     if (availableImages.length === 0) {
         // Reset selectedImages array if all images have been selected
         selectedImages = [];
-        loadImages(); // Reload images to allow selection again
-        return getRandomImage();
+        return null; // Return null when all images are selected
     }
     const randomIndex = Math.floor(Math.random() * availableImages.length);
     const selectedImage = availableImages.splice(randomIndex, 1)[0];
