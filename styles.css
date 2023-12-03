@@ -14,7 +14,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    max-width: 800px; /* Adjust maximum width as needed */
+    max-width: 600px; /* Adjust maximum width as needed */
     margin: 0 auto; /* Center the container horizontally */
 }
 
@@ -59,7 +59,7 @@ button:hover {
 }
 
 .selected-images-container {
-    max-width: 1000px; /* Set a maximum width for the container */
+    max-width: 1500px; /* Set a maximum width for the container */
     margin: 0 auto; /* Center the container horizontally */
 }
 
