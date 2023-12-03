@@ -25,6 +25,7 @@ body {
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     margin-top: 20px;
+    margin-bottom: 20px; /* Add margin between the two containers */
 }
 
 button {
@@ -40,21 +41,18 @@ button:hover {
     background-color: #45a049;
 }
 
+.selected-image-container img {
+    margin-top: 10px; /* Add some space above the selected image */
+    max-width: 100%; /* Make the image responsive */
+}
+
 .selected-images-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    margin-top: 20px; /* Adjust margin as needed */
 }
 
-.selected-image-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    margin-top: 20px;
-}
-
-.selected-image-container img {
+.selected-images-container img {
     margin: 5px;
     max-width: 50px;
     max-height: 50px;
