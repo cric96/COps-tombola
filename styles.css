@@ -18,22 +18,15 @@ body {
     margin: 0 auto; /* Center the container horizontally */
 }
 
-.latest-image-container,
-.selected-image-container,
-.selected-images-container {
+.latest-image-container {
     text-align: center;
+    margin-bottom: 20px; /* Add margin to prevent cutting off the latest image */
 }
 
-.latest-image-container img,
-.selected-image-container img,
-.selected-images-container img {
+.latest-image-container img {
     max-width: 100%; /* Make the image responsive */
     border: 1px solid #ccc;
     border-radius: 5px;
-}
-
-.latest-image-container {
-    margin-bottom: 20px; /* Add margin between the latest image and the bingo box */
 }
 
 .bingo-box {
@@ -41,7 +34,8 @@ body {
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    margin-bottom: 20px; /* Add margin between the bingo box and selected images */
+    margin-top: 20px;
+    margin-bottom: 20px; /* Add margin between the two containers */
 }
 
 button {
@@ -51,18 +45,25 @@ button {
     color: #fff;
     border: none;
     border-radius: 5px;
+    margin-top: 10px; /* Add margin between the latest image and the button */
 }
 
 button:hover {
     background-color: #45a049;
 }
 
+.selected-image-container img {
+    max-width: 100%; /* Make the image responsive */
+    max-height: 200px; /* Set a maximum height for the latest image */
+    object-fit: cover;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
 .selected-images-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    margin-top: 20px; /* Adjust margin as needed */
-    margin-bottom: 20px; /* Add margin to prevent cutting off the latest image */
 }
 
 .selected-images-container img {

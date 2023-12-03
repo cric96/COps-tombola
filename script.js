@@ -5,19 +5,19 @@ let selectedImages = [];
 let images = [];
 
 function generateRandomImage() {
-    if (selectedImages.length === 0) {
-        loadImages();
-    }
-
     const latestImageContainer = document.getElementById('latestImageContainer');
     const randomImage = getRandomImage();
 
-    latestImageContainer.innerHTML = `<img src="${randomImage}" alt="Latest Selected Image">`;
+    if (randomImage) {
+        latestImageContainer.innerHTML = `<img src="${randomImage}" alt="Latest Selected Image">`;
 
-    const selectedImagesContainer = document.getElementById('selectedImages');
-    selectedImagesContainer.innerHTML += `<img src="${randomImage}" alt="Selected Image">`;
+        const selectedImagesContainer = document.getElementById('selectedImages');
+        selectedImagesContainer.innerHTML += `<img src="${randomImage}" alt="Selected Image">`;
 
-    selectedImages.push(randomImage);
+        selectedImages.push(randomImage);
+    } else {
+        latestImageContainer.innerHTML = ''; // Clear the latest image container when all images are selected
+    }
 }
 
 function getRandomImage() {
@@ -44,3 +44,6 @@ function loadImages() {
         })
         .catch(error => console.error('Error loading images:', error));
 }
+
+// Load images on page load
+loadImages();
