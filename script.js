@@ -29,7 +29,8 @@ function getRandomImage() {
         return getRandomImage();
     }
     const randomIndex = Math.floor(Math.random() * availableImages.length);
-    return availableImages[randomIndex];
+    const selectedImage = availableImages.splice(randomIndex, 1)[0];
+    return selectedImage;
 }
 
 function getAvailableImages() {
