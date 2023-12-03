@@ -22,6 +22,12 @@ function generateRandomImage() {
 
 function getRandomImage() {
     const availableImages = getAvailableImages();
+    if (availableImages.length === 0) {
+        // Reset selectedImages array if all images have been selected
+        selectedImages = [];
+        loadImages(); // Reload images to allow selection again
+        return getRandomImage();
+    }
     const randomIndex = Math.floor(Math.random() * availableImages.length);
     return availableImages[randomIndex];
 }
