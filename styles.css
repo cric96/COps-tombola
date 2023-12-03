@@ -66,9 +66,15 @@ button:hover {
 
 .selected-images-container img {
     margin: 5px;
-    max-width: 50px;
-    max-height: 50px;
+    max-width: 100px;
+    max-height: 100px;
     object-fit: cover;
     border: 1px solid #ccc;
     border-radius: 5px;
+}
+
+/* New style to create rows of ten */
+.selected-images-container::after {
+    content: '';
+    flex: auto;
 }
