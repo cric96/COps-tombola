@@ -35,15 +35,23 @@ button {
     color: #fff;
     border: none;
     border-radius: 5px;
+    margin-top: 10px; /* Add margin between the latest image and the button */
 }
 
 button:hover {
     background-color: #45a049;
 }
 
+.selected-image-container {
+    margin-bottom: 10px; /* Add margin between the latest image and the button */
+}
+
 .selected-image-container img {
-    margin-top: 10px; /* Add some space above the selected image */
     max-width: 100%; /* Make the image responsive */
+    max-height: 200px; /* Set a maximum height for the latest image */
+    object-fit: cover;
+    border: 1px solid #ccc;
+    border-radius: 5px;
 }
 
 .selected-images-container {
