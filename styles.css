@@ -61,6 +61,8 @@ button:hover {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    margin-top: 20px; /* Adjust margin as needed */
+    margin-bottom: 20px; /* Add margin to prevent cutting off the latest image */
 }
 
 .selected-images-container img {

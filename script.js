@@ -5,8 +5,17 @@ let selectedImages = [];
 let images = [];
 
 function generateRandomImage() {
+    const loadImagesMessage = document.getElementById('loadImagesMessage');
     if (selectedImages.length === 0) {
-        loadImages();
+        loadImagesMessage.textContent = 'Images loading...';
+        loadImages()
+            .then(() => {
+                loadImagesMessage.textContent = 'Images loaded!';
+            })
+            .catch(error => {
+                console.error('Error loading images:', error);
+                loadImagesMessage.textContent = 'Error loading images';
+            });
     }
 
     const latestImageContainer = document.getElementById('latestImageContainer');
