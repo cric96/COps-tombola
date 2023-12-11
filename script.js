@@ -9,8 +9,8 @@ function generateRandomImage() {
     const randomImage = getRandomImage();
 
     if (randomImage) {
-        latestImageContainer.innerHTML = `<img src="${randomImage}" alt="Latest Selected Image">`;
-
+        // change image source
+        document.getElementById('latestImage').src = randomImage;
         const selectedImagesContainer = document.getElementById('selectedImages');
         selectedImagesContainer.innerHTML += `<img src="${randomImage}" alt="Selected Image">`;
 
